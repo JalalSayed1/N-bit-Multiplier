@@ -1,0 +1,7 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a96c936be8ac412a9cb9d59f58949a89 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot multiplier_nbits_behav xil_defaultlib.multiplier_nbits -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-8350] formal port 'sum' of mode 'out' cannot be associated with actual port 'sum' of mode 'in' [C:/Users/aa409t/Desktop/FPGA intern/N-bit_multiplier/N-bit_multiplier.srcs/sources_1/new/multiplier_nbits.vhd:85]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit multiplier_nbits in library work failed.
