@@ -49,34 +49,27 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity multiplier_nbits is
-    Port ( A : in STD_LOGIC_VECTOR (1 downto 0);
-           B : in STD_LOGIC_VECTOR (1 downto 0);
-           S : out STD_LOGIC_VECTOR (3 downto 0)
+    generic (
+        n : integer := 3
+    );
+    Port ( A : in STD_LOGIC_VECTOR (n-1 downto 0);
+           B : in STD_LOGIC_VECTOR (n-1 downto 0);
+           S : out STD_LOGIC_VECTOR (2*n downto 0) -- max output length = 2*n
            );
 end multiplier_nbits;
 
 architecture Behavioral of multiplier_nbits is
     
-    signal andgate_1 : STD_LOGIC := '0';
-    signal andgate_2 : STD_LOGIC := '0';
-    signal andgate_3 : STD_LOGIC := '0';
-    signal andgate_4 : STD_LOGIC := '0';
+    -- we need n*n and gates for n bit multiplier:
+    signal and_gates_outputs : STD_LOGIC_VECTOR(n*n - 1 downto 0) := (others => '0');
     
-    signal internal_sum : std_logic_vector (1 downto 0);
+    signal internal_sum : STD_LOGIC_VECTOR(n*n - 1 downto 0) := (others => '0');
+    
         
     COMPONENT FullAdder_nbits 
             generic (
-                num_of_bit: integer := 2 
+                num_of_bit: integer := n
             );
             Port (
             A    : in  std_logic_vector(num_of_bit-1 downto 0) ;
@@ -87,29 +80,77 @@ architecture Behavioral of multiplier_nbits is
         );
     end COMPONENT;
     
-    
 begin
 
-    andgate_1 <= A(0) AND B(0);
-    andgate_2 <= A(0) AND B(1);
-    andgate_3 <= A(1) AND B(0);
-    andgate_4 <= A(1) AND B(1);
+    process
     
-    S(0) <= andgate_1;
+    variable and_gates_outputs_index : integer := 0;
+    
+    begin
+        
+        for B_index in 0 to n loop
+            for A_index in 0 to n loop
+                and_gates_outputs(and_gates_outputs_index) <= A(A_index) AND B(B_index);
+                and_gates_outputs_index := and_gates_outputs_index + 1;
+            end loop;
+        end loop;
+       
+    wait for 1 ps;
+    end process;
+    
+    -- first AND gates output goes to final output directly:
+    S(0) <= and_gates_outputs(0);
+    
+    nbit_adders_gen: for adder_index in 0 to n-1 generate
+    
+    process
+       
+    -- index start from 1 because first AND gate output maps directly to final output:
+    variable and_gates_outputs_index : integer := 1;
+    variable internal_sum : STD_LOGIC_VECTOR (n-1 downto 0);
+--    variable adder_input : STD_LOGIC_VECTOR (n-1 downto 0);
+    
+    begin
+    
+    -- only for the first adder:
+    if adder_index = 0 then
+    
+--        adder_input := and_gates_outputs(and_gates_outputs_index) & and_gates_outputs(and_gates_outputs_index+1);
     
         FA: FullAdder_nbits
         port map (
-            A(0)    => andgate_2,
-            A(1)    => andgate_4,
-            B(0)    => andgate_3,
-            B(1)    => '0',
+            A    => and_gates_outputs(and_gates_outputs_index) & and_gates_outputs(and_gates_outputs_index+1) & '0',
+            B    => and_gates_outputs(and_gates_outputs_index+2) & and_gates_outputs(and_gates_outputs_index+3) & and_gates_outputs(and_gates_outputs_index+4),
             Cin  => '0',
-            Sum  => internal_sum,
-            Cout => S(3)
+            Sum  => internal_sum, -- start work from here for the internal wires for inter-adder interface 
+            Cout => 
         );
         
-        S(1) <= internal_sum(0);
-        S(2) <= internal_sum(1);
+        -- increment index by the number of bits we already used:
+        and_gates_outputs_index := and_gates_outputs_index + 5;
+            
+    else
+           
+        FA: FullAdder_nbits
+        port map (
+            A(0)    => ,
+            A(1)    => ,
+            B(0)    => ,
+            B(1)    => ,
+            Cin  => '0',
+            Sum  => ,
+            Cout => 
+        );
+            
+    end if;
+    end process;
+        
+        
+    
+    end generate nbit_adders_gen;
+        
+    S(1) <= internal_sum(0);
+    S(2) <= internal_sum(1);
     
 
 end Behavioral;
