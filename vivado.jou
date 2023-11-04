@@ -72,3 +72,12 @@ source multiplier_nbits_tb.tcl
 close_sim
 launch_simulation -simset [get_filesets sim_2 ]
 source multiplier_nbits_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+source multiplier_nbits_tb.tcl
+close_sim
+launch_simulation -simset [get_filesets sim_2 ]
+source multiplier_nbits_tb.tcl
+close_sim
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
