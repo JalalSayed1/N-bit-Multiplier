@@ -1,51 +1,3 @@
--------------------------------------------------------------------------------
--- File Information:
---   Title:           N-bit Multiplier Module
---   File Name:       multiplier_nbits.vhdl
---   Author:          Jalal and Tamim
---   Date Created:    29-Oct-2023
---   Last Modified:   29-Oct-2023
---   Vivado Version:    2020.2
---   Company:         QCG
---   Project:         [Project Name]
---   Target Device:   [Target FPGA/ASIC Device]
---   Tool Version:    [EDA Tool Version]
-
--------------------------------------------------------------------------------
--- Description:
---   This file contains the behavioral description of an 2-bit multiplier
---   module. The multiplier takes two bit unsigned binary numbers as input
---   and produces a 2N-bit unsigned binary product.
-
--------------------------------------------------------------------------------
--- Dependencies:
---   None.
-
--------------------------------------------------------------------------------
--- Revision History:
---   Rev 0.01 - 29-Oct-2023 - File created by [Your Name]
-
--------------------------------------------------------------------------------
--- Known Issues:
---   None.
-
--------------------------------------------------------------------------------
--- Usage:
---   To use this module, instantiate it in your top-level file and connect
---   the input and output ports accordingly. Example instantiation:
---
---   MULTIPLIER_NBITS u_mult (
---       .a (input_a),
---       .b (input_b),
---       .p (output_product)
---   );
-
--------------------------------------------------------------------------------
--- Copyright Notice:
---   Copyright (C) 2023 by [Your Name or Your Company]. All rights reserved.
--------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -55,17 +7,16 @@ entity multiplier_nbits is
     );
     Port ( A : in STD_LOGIC_VECTOR (n-1 downto 0);
            B : in STD_LOGIC_VECTOR (n-1 downto 0);
-           S : out STD_LOGIC_VECTOR (2*n downto 0) -- max output length = 2*n
+           multiplier_output : out STD_LOGIC_VECTOR (2*n downto 0) -- max output length = 2*n
            );
 end multiplier_nbits;
 
 architecture Behavioral of multiplier_nbits is
     
-    -- we need n*n and gates for n bit multiplier:
-    signal and_gates_outputs : STD_LOGIC_VECTOR(n*n - 1 downto 0) := (others => '0');
-    
-    signal internal_sum : STD_LOGIC_VECTOR(n*n - 1 downto 0) := (others => '0');
-    
+    signal adder_input_A : STD_LOGIC_VECTOR(n-1 downto 0) := (others => '0');
+    signal adder_input_B : STD_LOGIC_VECTOR(n-1 downto 0) := (others => '0');
+    -- output value from one adder block (n-1 sum bits + Cout):
+    signal adder_output : STD_LOGIC_VECTOR(n downto 0) := (others => '0');
         
     COMPONENT FullAdder_nbits 
             generic (
@@ -81,76 +32,83 @@ architecture Behavioral of multiplier_nbits is
     end COMPONENT;
     
 begin
-
     process
-    
-    variable and_gates_outputs_index : integer := 0;
-    
+        variable adder_input_A_index : integer := 0;
+        variable adder_input_B_index : integer := 0;
+        -- max number of adder needed for nbit multiplier must be = n-1:
+        variable adder_counter : integer := 0;
+        -- max number of adder outputs needed for nbit multiplier must be = n (n-1 sum bits + Cout):
+        variable adder_output_index : integer := 0;
     begin
+        -- make adder inputs (AND gates outputs):
+
+        for B_index in 0 to n-1 loop
+            for A_index in 0 to n-1 loop
+            
+                if B_index = 0 then
+                    -- Calculate B0 * A
+                    adder_input_A(adder_input_A_index) <= A(A_index) AND B(B_index);
+                    -- Calculate B1 * A
+                    adder_input_B(adder_input_B_index) <= A(A_index) AND B(B_index+1);
+                
+                -- for every thing else:
+                elsif (B_index /= 1) then
+                    -- Calculate B2 * A then B3 *A and so on:
+                    adder_input_B(adder_input_B_index) <= A(A_index) AND B(B_index);
+                end if;
+                
+                adder_input_A_index := adder_input_A_index + 1; -- might have to be inside the if statement
+                adder_input_B_index := adder_input_B_index + 1;
+                
+            end loop; -- end A_index loop
         
-        for B_index in 0 to n loop
-            for A_index in 0 to n loop
-                and_gates_outputs(and_gates_outputs_index) <= A(A_index) AND B(B_index);
-                and_gates_outputs_index := and_gates_outputs_index + 1;
+        wait for 1 ps;
+
+        -- reset the index for the next iteration:
+        adder_input_A_index := 0;
+        adder_input_B_index := 0;
+
+        -- map first AND gate output to multiplier output:
+        if adder_counter = 0 then
+            multiplier_output(adder_counter) <= adder_input_A(0);
+            -- shift adder_input_A and add 0 to the MSB (this is the A input to the first adder):
+            -- adder_input_A <= adder_input_A >> 1; -- this might be wrong
+            adder_input_A <= '0' & adder_input_A(n-1 downto 1);
+        else
+            -- map first adder output to multiplier output:
+            multiplier_output(adder_counter) <= adder_output(0);
+        end if;
+
+        -- perform addition:
+        FA: FullAdder_nbits
+            port map (
+                A    => adder_input_A,
+                B    => adder_input_B,
+                Cin  => '0',
+                Sum  => adder_output(n-1 downto 0),
+                Cout => adder_output(n)
+            );
+
+        wait for 1 ps;
+
+        -- map output from previous adder to input of next adder:
+        if adder_counter \= n-1 then
+            adder_input_A <= adder_output(n downto 1);
+
+        else
+            -- map last adder output to multiplier output:
+            for multiplier_output_index in adder_counter to 2*n-1 loop
+                multiplier_output(multiplier_output_index) <= adder_output(adder_output_index);
+                adder_output_index := adder_output_index + 1;
             end loop;
-        end loop;
-       
-    wait for 1 ps;
-    end process;
-    
-    -- first AND gates output goes to final output directly:
-    S(0) <= and_gates_outputs(0);
-    
-    nbit_adders_gen: for adder_index in 0 to n-1 generate
-    
-    process
-       
-    -- index start from 1 because first AND gate output maps directly to final output:
-    variable and_gates_outputs_index : integer := 1;
-    variable internal_sum : STD_LOGIC_VECTOR (n-1 downto 0);
---    variable adder_input : STD_LOGIC_VECTOR (n-1 downto 0);
-    
-    begin
-    
-    -- only for the first adder:
-    if adder_index = 0 then
-    
---        adder_input := and_gates_outputs(and_gates_outputs_index) & and_gates_outputs(and_gates_outputs_index+1);
-    
-        FA: FullAdder_nbits
-        port map (
-            A    => and_gates_outputs(and_gates_outputs_index) & and_gates_outputs(and_gates_outputs_index+1) & '0',
-            B    => and_gates_outputs(and_gates_outputs_index+2) & and_gates_outputs(and_gates_outputs_index+3) & and_gates_outputs(and_gates_outputs_index+4),
-            Cin  => '0',
-            Sum  => internal_sum, -- start work from here for the internal wires for inter-adder interface 
-            Cout => 
-        );
-        
-        -- increment index by the number of bits we already used:
-        and_gates_outputs_index := and_gates_outputs_index + 5;
-            
-    else
-           
-        FA: FullAdder_nbits
-        port map (
-            A(0)    => ,
-            A(1)    => ,
-            B(0)    => ,
-            B(1)    => ,
-            Cin  => '0',
-            Sum  => ,
-            Cout => 
-        );
-            
-    end if;
-    end process;
-        
-        
-    
-    end generate nbit_adders_gen;
-        
-    S(1) <= internal_sum(0);
-    S(2) <= internal_sum(1);
-    
 
+        end if;
+
+        -- decrement the adder counter:
+        adder_counter := adder_counter + 1;
+
+
+        end loop; -- end B_index loop
+    end process;
+    
 end Behavioral;
