@@ -1,43 +1,64 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 11.11.2023 19:11:35
--- Design Name: 
--- Module Name: multiply_new - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+entity multiplier_nbits is
+  generic (N : integer := 16);
+  port (
+    A : in std_logic_vector(N-1 downto 0);
+    B : in std_logic_vector(N-1 downto 0);
+    multiplier_out : out std_logic_vector(2*N-1 downto 0)
+  );
+end multiplier_nbits;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+architecture Behavioral of multiplier_nbits is
 
-entity multiply_new is
---  Port ( );
-end multiply_new;
-
-architecture Behavioral of multiply_new is
+    -- signals, componenets import..
+    signal result: std_logic_vector(2*N downto 0) := (others => '0');
+    signal adder_input_A: std_logic_vector(N-1 downto 0);
+    signal adder_input_B: std_logic_vector(N-1 downto 0);
+    
+    component FullAdder_nbits
+        generic (num_of_bit : integer := N);
+        port (
+            A    : in  STD_LOGIC_VECTOR (num_of_bit-1 downto 0);
+            B    : in  STD_LOGIC_VECTOR (num_of_bit-1 downto 0);
+            Cin  : in  STD_LOGIC;
+            Sum  : out STD_LOGIC_VECTOR (num_of_bit-1 downto 0);
+            Cout : out STD_LOGIC
+        );
+    end component;
 
 begin
 
+    -- logic, variables inside processes, port map to componenets..
+
+    FA1: FullAdder_nbits
+    port map(
+        A => adder_input_A,
+        B => adder_input_B,
+        Cin => '0',
+        Sum => result(N-1 downto 0),
+        Cout => open -- leave unconnected
+    );
+
+    add_op: process (A, B)
+        -- variables if needed..
+    begin
+        -- loop from LSB to MSB:
+        for B_index in N-1 downto 0 loop
+            if B(B_index) = '1' then
+                -- add operation:
+                adder_input_A <= A;
+                adder_input_B <= result(N-1 downto 0);
+            end if;
+            
+            -- right shift operation:
+            result <= result(result'length - 1) & result(result'length-1 downto 1);
+            
+        end loop;
+        
+    end process add_op;
+    
+    multiplier_out <= result;
 
 end Behavioral;
