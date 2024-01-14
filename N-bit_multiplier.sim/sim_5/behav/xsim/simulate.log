@@ -1,0 +1,4 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Error: Output mismatch - when input A = 1 and B = 7
+Time: 10 ps  Iteration: 0  Process: /multiplier_nbits_tb/stimulus  File: C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.srcs/sim_5/new/multiplier_nbits_tb.vhd

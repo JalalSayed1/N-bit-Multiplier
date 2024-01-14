@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.ALL;
 
 entity multiplier_nbits is
   generic (N : integer := 16);
@@ -13,17 +14,17 @@ end multiplier_nbits;
 architecture Behavioral of multiplier_nbits is
 
     -- signals, componenets import..
-    signal result: std_logic_vector(2*N downto 0) := (others => '0');
-    signal adder_input_A: std_logic_vector(N-1 downto 0);
-    signal adder_input_B: std_logic_vector(N-1 downto 0);
+    signal result: std_logic_vector(2*N-1 downto 0) := (others => '0');
+    signal adder_input_A: std_logic_vector(N-1 downto 0) := (others => '0');
+    signal adder_input_B: std_logic_vector(N-1 downto 0) := (others => '0');
     
     component FullAdder_nbits
         generic (num_of_bit : integer := N);
         port (
-            A    : in  STD_LOGIC_VECTOR (num_of_bit-1 downto 0);
-            B    : in  STD_LOGIC_VECTOR (num_of_bit-1 downto 0);
+            A    : in  STD_LOGIC_VECTOR (N-1 downto 0);
+            B    : in  STD_LOGIC_VECTOR (N-1 downto 0);
             Cin  : in  STD_LOGIC;
-            Sum  : out STD_LOGIC_VECTOR (num_of_bit-1 downto 0);
+            Sum  : out STD_LOGIC_VECTOR (N-1 downto 0);
             Cout : out STD_LOGIC
         );
     end component;
@@ -50,11 +51,15 @@ begin
                 -- add operation:
                 adder_input_A <= A;
                 adder_input_B <= result(N-1 downto 0);
-            end if;
-            
+                
+                -- left shift:
+                result <= result(result'length-2 downto 0) & '0';
+s                
             -- right shift operation:
-            result <= result(result'length - 1) & result(result'length-1 downto 1);
+--            result <= result(result'length - 1) & result(result'length-1 downto 1);
             
+            end if;
+
         end loop;
         
     end process add_op;
