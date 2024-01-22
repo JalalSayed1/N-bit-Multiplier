@@ -41,29 +41,23 @@ begin
         Cout => open -- leave unconnected
     );
 
-    add_op : process
+    mul_op : process
         -- variables if needed..
     begin
-        wait for 10 ns;
+        wait for 1 ns;
         -- loop from LSB to MSB:
         for B_index in B'range loop
             -- Left-Shift op:
-            report "Shifting " & INTEGER'image(B'length - 1) & " to 0";
-            report "Current Result is " & INTEGER'image(to_integer(unsigned(result)));
-            report "A is " & INTEGER'image(to_integer(unsigned(A)));
-            report "B is " & INTEGER'image(to_integer(unsigned(B)));
-            result <= result(result'length - 2 downto 0) & '0';
-            report "New Result is " & INTEGER'image(to_integer(unsigned(result)));
-
-            wait for 100 ns;
-            --wait on result;
-            report "Result is stable";
+            if B_index /= B'length-1 then
+                report "Current Result is " & INTEGER'image(to_integer(unsigned(result)));
+                result <= result(result'length - 2 downto 0) & '0';
+                report "New Result is " & INTEGER'image(to_integer(unsigned(result)));
+    
+                wait for 1 ns;
+            end if;
 
             if B(B_index) = '1' then
-                report "Bit is 1";
-                report "Sending " & INTEGER'image(to_integer(unsigned(A))) & " to adder_input_A";
-                report "Sending " & INTEGER'image(to_integer(unsigned(result))) & " to adder_input_B";
-                -- Add op:
+                report "Bit is 1. Sending " & INTEGER'image(to_integer(unsigned(A))) & " to adder_input_A";
                 -- Cast A from N to 2*N:
                 adder_input_A <= STD_LOGIC_VECTOR(resize(unsigned(A), adder_input_A'length));
                 adder_input_B <= result;
@@ -72,17 +66,14 @@ begin
                 report "Bit is 0";
             end if;
 
-            wait for 100 ns;
-            report "Temp Result is " & INTEGER'image(to_integer(unsigned(temp_result)));
-            --wait on temp_result;
-            report "Temp Result is stable";
-
+            wait for 1 ns;
+            
+            report "Assigning temp result to result. Temp Result is " & INTEGER'image(to_integer(unsigned(temp_result)));
             result <= temp_result;
 
         end loop;
-        multiplier_out <= result;
-    end process add_op;
+    end process mul_op;
 
-    -- multiplier_out <= result;
+     multiplier_out <= result;
 
 end Behavioral;

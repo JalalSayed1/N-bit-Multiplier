@@ -8,7 +8,7 @@ end;
 architecture bench of multiplier_nbits_tb is
 
     -- signals, components..
-    constant N: integer := 3;
+    constant N: integer := 2;
     -- num of combination for each N bit number:
     constant num_of_combination: integer := (2**N)-1;
 
