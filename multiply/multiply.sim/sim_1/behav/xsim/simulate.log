@@ -1,7 +1,0 @@
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-ERROR: Index 7 out of bound 6 downto 0
-Time: 0 ps  Iteration: 0  Process: /multiplier_nbits_tb/uut/line__69
-  File: C:/Users/aa409t/Desktop/FPGA intern/multiply/multiply.srcs/sources_1/new/multiplier_nbits.vhd
-
-HDL Line: C:/Users/aa409t/Desktop/FPGA intern/multiply/multiply.srcs/sources_1/new/multiplier_nbits.vhd:101
