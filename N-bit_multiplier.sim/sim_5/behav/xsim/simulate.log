@@ -1,12 +1,224 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-Note: Shifting 1 to 0
-Time: 0 ps  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
-Note: Old Result is 0
-Time: 0 ps  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
-Note: New Result is 0
-Time: 0 ps  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Starting test
+Time: 0 ps  Iteration: 0  Process: /multiplier_nbits_tb/stimulus  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sim_5/new/multiplier_nbits_tb.vhd
 Note: A and B set to 1
 Time: 0 ps  Iteration: 0  Process: /multiplier_nbits_tb/stimulus  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sim_5/new/multiplier_nbits_tb.vhd
+Note: Shifting 2 to 0
+Time: 10 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 0
+Time: 10 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 10 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 10 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 0
+Time: 10 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
 Note: Output is 0
-Time: 10 ns  Iteration: 0  Process: /multiplier_nbits_tb/stimulus  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sim_5/new/multiplier_nbits_tb.vhd
+Time: 100 ns  Iteration: 0  Process: /multiplier_nbits_tb/stimulus  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sim_5/new/multiplier_nbits_tb.vhd
+Note: Result is stable
+Time: 110 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 110 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 110 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 0 to adder_input_B
+Time: 110 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 7
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 0
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 0
+Time: 210 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 310 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 310 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 310 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 0 to adder_input_B
+Time: 310 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 7
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 0
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 0
+Time: 410 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 510 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 510 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 510 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 0 to adder_input_B
+Time: 510 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 7
+Time: 610 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 610 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 620 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 7
+Time: 620 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 620 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 620 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 7
+Time: 620 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 720 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 720 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 720 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 14 to adder_input_B
+Time: 720 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 21
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 14
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 14
+Time: 820 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 920 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 920 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 920 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 28 to adder_input_B
+Time: 920 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 35
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 28
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 28
+Time: 1020 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 1120 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 1120 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 1120 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 56 to adder_input_B
+Time: 1120 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 63
+Time: 1220 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 1220 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 1230 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 63
+Time: 1230 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 1230 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 1230 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 63
+Time: 1230 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 1330 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 1330 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 1330 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 62 to adder_input_B
+Time: 1330 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 5
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 62
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 62
+Time: 1430 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 1530 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 1530 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 1530 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 60 to adder_input_B
+Time: 1530 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 3
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 60
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 60
+Time: 1630 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 1730 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 1730 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 1730 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 56 to adder_input_B
+Time: 1730 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is 63
+Time: 1830 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Temp Result is stable
+Time: 1830 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Shifting 2 to 0
+Time: 1840 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Current Result is 63
+Time: 1840 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: A is 7
+Time: 1840 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: B is 7
+Time: 1840 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: New Result is 63
+Time: 1840 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Result is stable
+Time: 1940 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Bit is 1
+Time: 1940 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 7 to adder_input_A
+Time: 1940 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
+Note: Sending 62 to adder_input_B
+Time: 1940 ns  Iteration: 0  Process: /multiplier_nbits_tb/uut/add_op  File: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.srcs/sources_1/new/multiply_new.vhd
