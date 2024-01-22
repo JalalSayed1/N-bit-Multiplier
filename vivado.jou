@@ -2,74 +2,23 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Jan 14 15:17:53 2024
-# Process ID: 19416
-# Current directory: C:/Users/Jalal/Desktop/N-bit-Multiplier
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20088 C:\Users\Jalal\Desktop\N-bit-Multiplier\N-bit_multiplier.xpr
-# Log file: C:/Users/Jalal/Desktop/N-bit-Multiplier/vivado.log
-# Journal file: C:/Users/Jalal/Desktop/N-bit-Multiplier\vivado.jou
+# Start of session at: Mon Jan 22 10:19:39 2024
+# Process ID: 19112
+# Current directory: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16500 C:\Users\Jalal\Desktop\FPGAs\N-bit-Multiplier\N-bit_multiplier.xpr
+# Log file: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/vivado.log
+# Journal file: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.xpr
-set_property top multiplier_nbits_tb [get_filesets sim_5]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
+open_project C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.xpr
 launch_simulation -simset [get_filesets sim_5 ]
 source multiplier_nbits_tb.tcl
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
 close_sim
 launch_simulation -simset [get_filesets sim_5 ]
 source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_5 ]
-source multiplier_nbits_tb.tcl
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
 close_sim

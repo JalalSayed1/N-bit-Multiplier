@@ -13,6 +13,6 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling architecture behavioral of entity xil_defaultlib.FullAdder_1bit [fulladder_1bit_default]
 Compiling architecture behavioral of entity xil_defaultlib.FullAdder_nbits [\FullAdder_nbits(num_of_bit=4)\]
-Compiling architecture behavioral of entity xil_defaultlib.multiplier_nbits [\multiplier_nbits(n=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.multiplier_nbits [\multiplier_nbits(n=2)\]
 Compiling architecture bench of entity xil_defaultlib.multiplier_nbits_tb
 Built simulation snapshot multiplier_nbits_tb_behav

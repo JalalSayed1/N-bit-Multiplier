@@ -2,12 +2,12 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Jan 14 16:04:27 2024
-# Process ID: 14552
-# Current directory: C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim/xsim.dir/multiplier_nbits_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim/webtalk.log
-# Journal file: C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim\webtalk.jou
+# Start of session at: Mon Jan 22 08:59:03 2024
+# Process ID: 11188
+# Current directory: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim/xsim.dir/multiplier_nbits_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim/webtalk.log
+# Journal file: C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Jalal/Desktop/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim/xsim.dir/multiplier_nbits_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sun Jan 14 16:04:28 2024...
+source C:/Users/Jalal/Desktop/FPGAs/N-bit-Multiplier/N-bit_multiplier.sim/sim_5/behav/xsim/xsim.dir/multiplier_nbits_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Jan 22 08:59:04 2024...
